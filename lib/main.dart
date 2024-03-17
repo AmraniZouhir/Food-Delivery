@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:fooddelivery/Pages/splashScreen_page.dart';
+import 'package:fooddelivery/Theme/theme_provider.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(ChangeNotifierProvider(
+    create: (context) => ThemeProvider(),
+    child: MyApp(),
+  ));
 }
 
 class MyApp extends StatelessWidget {
@@ -11,8 +16,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(),
-      home: splashScreen_page(),
+      theme: Provider.of<ThemeProvider>(context).themeData,
+      home: const splashScreen_page(),
     );
   }
 }
