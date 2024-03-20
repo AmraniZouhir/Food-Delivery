@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fooddelivery/Pages/splashScreen_page.dart';
 import 'package:fooddelivery/Theme/theme_provider.dart';
+import 'package:fooddelivery/auth/login_or_register.dart';
 import 'package:provider/provider.dart';
 
 void main() {
