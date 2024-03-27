@@ -1,6 +1,7 @@
+import 'package:flutter/material.dart';
 import 'package:fooddelivery/models/Foodes.dart';
 
-class Restaurant {
+class Restaurant extends ChangeNotifier {
   final List<Product> _menu = [
     // Burgers
     Product(
